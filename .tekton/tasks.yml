@@ -8,7 +8,7 @@ metadata:
 spec:
   workspaces:
     - name: source
-  tasks:
+  steps:
     - name: remove
       image: alpine:3
       env:
@@ -61,4 +61,4 @@ spec:
         python -m pip install --upgrade pip wheel
         pip install -r requirements.txt
         nosetests $(params.args)
-        
+
